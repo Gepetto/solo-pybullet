@@ -4,7 +4,7 @@ import numpy as np  # Numpy library
 
 import pybullet as p  # PyBullet simulator
 import pybullet_data
-from .robots_loader import loadSolo  # Functions to load the SOLO quadruped
+from example_robot_data import loadSolo  # Functions to load the SOLO quadruped
 
 
 def configure_simulation(dt, enableGUI):
