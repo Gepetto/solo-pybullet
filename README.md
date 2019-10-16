@@ -22,4 +22,4 @@ To install PyBullet:
 `pip install --user pybullet`
 
 ## How to start the simulation
-Run main.py
+launch `gepetto-gui`, then `python -m solo_pybullet`
