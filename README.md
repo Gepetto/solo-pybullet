@@ -15,7 +15,7 @@ sudo apt update -qqy && sudo apt install -qqy robotpkg-example-robot-data
 ```
 
 To install PyBullet:
-`pip install pybullet`
+`pip install --user pybullet`
 
 ## How to start the simulation
-Run main.py 
+Run main.py
