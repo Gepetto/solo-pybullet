@@ -1,6 +1,8 @@
 # solo-pybullet
 **Simulation and Controller code for Solo Quadruped**
+
 This repository offers an environment to simulate different controllers on the Quadruped robot **Solo**.
+
 You can implement your controller on the controller.py file and call your control function in the main program main.py by replacing the `c(...)` function in the loop.
 
 ## Installation
