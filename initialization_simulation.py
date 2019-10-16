@@ -8,14 +8,17 @@ import robots_loader # Functions to load the SOLO quadruped
 from pinocchio.utils import * # Utilitary functions from Pinocchio
 from pinocchio.robot_wrapper import RobotWrapper # Robot Wrapper to load an URDF in Pinocchio
 
-def configure_simulation(dt):
+def configure_simulation(dt,enableGUI):
     global jointTorques
     # Load the robot for Pinocchio
     solo = robots_loader.loadSolo(True)
     solo.initDisplay(loadModel=True)
 
     # Start the client for PyBullet
-    physicsClient = p.connect(p.GUI)
+    if enableGUI:
+        physicsClient = p.connect(p.GUI)
+    else:
+        physicsClient = p.connect(p.DIRECT)
     # p.GUI for graphical version
     # p.DIRECT for non-graphical version
 
