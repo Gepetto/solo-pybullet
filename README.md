@@ -3,7 +3,7 @@
 
 This repository offers an environment to simulate different controllers on the Quadruped robot **Solo**.
 
-You can implement your controller on the controller.py file and call your control function in the main program main.py by replacing the `c(...)` function in the loop.
+You can implement your controller on the *controller.py* file and call your control function in the main program *main.py* by replacing the `c(...)` function in the loop.
 
 ## Installation
 To install Pinocchio : follow the instructions on https://stack-of-tasks.github.io/pinocchio/download.html
