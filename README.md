@@ -9,9 +9,10 @@ You can implement your controller on the *controller.py* file and call your cont
 To install Pinocchio : follow the instructions on https://stack-of-tasks.github.io/pinocchio/download.html
 
 To download the urdf and meshes of the **Solo** Quadruped:
-```sudo sh -c "echo 'deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub xenial robotpkg' >> /etc/apt/sources.list.d/robotpkg.list"
-sudo apt update -qqy && sudo apt install -qqy robotpkg-example-robot-data```
-
+```
+sudo sh -c "echo 'deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub xenial robotpkg' >> /etc/apt/sources.list.d/robotpkg.list"
+sudo apt update -qqy && sudo apt install -qqy robotpkg-example-robot-data
+```
 
 To install PyBullet:
 `pip install pybullet`
