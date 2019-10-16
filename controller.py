@@ -77,12 +77,12 @@ def c_walking(q, qdot, dt, solo, t_simu):
 	
     #Initialization of the variables
     Kp = 100. 	#Convergence gain
-    T = 0.5		#period of the foot trajectory
+    T = 0.2		#period of the foot trajectory
     xF0 = 0.19	#initial position of the front feet
     xH0 = -0.19	#initial position of the hind feet
     z0 = 0.0	#initial altitude of each foot
     dx = 0.03 	#displacement amplitude by x
-    dz = 0.05	#displacement amplitude by z
+    dz = 0.06	#displacement amplitude by z
     
     # Get the frame index of each foot
     ID_FL = solo.model.getFrameId("FL_FOOT")
@@ -170,7 +170,7 @@ def c_walking(q, qdot, dt, solo, t_simu):
     
     # Parameters for the PD controller
     Kp = 8.
-    Kd = 0.06
+    Kd = 0.2
     torque_sat = 3 # torque saturation in N.m
     torques_ref = np.zeros((8,1)) # feedforward torques
 
