@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 SET(PROJECT_NAMESPACE gepetto)
 SET(PROJECT_NAME solo-pybullet)
-SET(PROJECT_DESCRIPTION "code de simulation et de contrôle du quadrupède Solo ")
+SET(PROJECT_DESCRIPTION "Simulation and Controller code for Solo Quadruped")
 SET(PROJECT_URL "https://github.com/${PROJECT_NAMESPACE}/${PROJECT_NAME}")
 
 INCLUDE(cmake/base.cmake)
