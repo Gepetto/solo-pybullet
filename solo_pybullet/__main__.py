@@ -20,7 +20,7 @@ dt = 0.001  # time step of the simulation
 # If True then we will sleep in the main loop to have a 1:1 ratio of (elapsed real time / elapsed time in the
 # simulation))
 realTimeSimulation = True
-enableGUI = False  # enable PyBullet GUI or not
+enableGUI = True  # enable PyBullet GUI or not
 robotId, solo, revoluteJointIndices = configure_simulation(dt, enableGUI)
 
 ###############

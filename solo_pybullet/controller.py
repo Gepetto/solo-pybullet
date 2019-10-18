@@ -34,11 +34,11 @@ def c(q, qdot, dt):
     # Parameters for the PD controller
     Kp = 8.
     Kd = 0.06
-    torque_sat = 3  # torque saturation in N.m
+    torques_sat = 3 * np.ones((8, 1))  # torque saturation in N.m
     torques_ref = np.zeros((8, 1))  # feedforward torques
 
     # Call the PD controller
-    torques = PD(qa_ref, qa_dot_ref, qa, qa_dot, dt, Kp, Kd, torque_sat, torques_ref)
+    torques = PD(qa_ref, qa_dot_ref, qa, qa_dot, dt, Kp, Kd, torques_sat, torques_ref)
 
     # torques must be a numpy array of shape (8, 1) containing the torques applied to the 8 motors
     return torques
@@ -174,11 +174,11 @@ def c_walking(q, qdot, dt, solo, t_simu):
     # Parameters for the PD controller
     Kp = 8.
     Kd = 0.2
-    torque_sat = 3  # torque saturation in N.m
+    torques_sat = 3 * np.ones((8, 1))  # torque saturation in N.m
     torques_ref = np.zeros((8, 1))  # feedforward torques
 
     # Call the PD controller
-    torques = PD(qa_ref, qa_dot_ref, qa, qa_dot, dt, Kp, Kd, torque_sat, torques_ref)
+    torques = PD(qa_ref, qa_dot_ref, qa, qa_dot, dt, Kp, Kd, torques_sat, torques_ref)
 
     # torques must be a numpy array of shape (8, 1) containing the torques applied to the 8 motors
     return torques
