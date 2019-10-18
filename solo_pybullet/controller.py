@@ -14,12 +14,12 @@ from .PD import PD
 
 def c(q, qdot, dt):
     # unactuated, [x, y, z] position of the base + [x, y, z, w] orientation of the base (stored as a quaternion)
-    qu = q[:7]  # noqa
+    # qu = q[:7]
     # actuated, [q1, q2, ..., q8] angular position of the 8 motors
     qa = q[7:]
     # [v_x, v_y, v_z] linear velocity of the base and [w_x, w_y, w_z] angular velocity of the base along x, y, z axes
     # of the world
-    qu_dot = qdot[:6]  # noqa
+    # qu_dot = qdot[:6]
     qa_dot = qdot[6:]  # angular velocity of the 8 motors
 
     qa_ref = np.zeros((8, 1))  # target angular positions for the motors
@@ -55,11 +55,11 @@ flag_q_ref = True
 
 def c_walking(q, qdot, dt, solo, t_simu):
     # unactuated, [x, y, z] position of the base + [x, y, z, w] orientation of the base (stored as a quaternion)
-    qu = q[:7]  # noqa
+    # qu = q[:7]
     qa = q[7:]  # actuated, [q1, q2, ..., q8] angular position of the 8 motors
     # [v_x, v_y, v_z] linear velocity of the base and [w_x, w_y, w_z] angular velocity of the base along x, y, z axes
     # of the world
-    qu_dot = qdot[:6]  # noqa
+    # qu_dot = qdot[:6]
     qa_dot = qdot[6:]  # angular velocity of the 8 motors
 
     qa_ref = np.zeros((8, 1))  # target angular positions for the motors
