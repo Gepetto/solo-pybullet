@@ -1,4 +1,8 @@
 # solo-pybullet
+
+[![Pipeline status](https://gepgitlab.laas.fr/gepetto/solo-pybullet/badges/master/pipeline.svg)](https://gepgitlab.laas.fr/gepetto/solo-pybullet/commits/master)
+[![Coverage report](https://gepgitlab.laas.fr/gepetto/solo-pybullet/badges/master/coverage.svg?job=doc-coverage)](http://projects.laas.fr/gepetto/doc/gepetto/solo-pybullet/master/coverage/)
+
 **Simulation and Controller code for Solo Quadruped**
 
 This repository offers an environment to simulate different controllers on the Quadruped robot **Solo**.
