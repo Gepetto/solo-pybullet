@@ -24,10 +24,11 @@ class TestController(unittest.TestCase):
         qa = q[7:]
         qa_dot = qdot[6:]
 
-        torques = np.matrix([[3.], [3.], [-3.], [3.], [-3.], [-3.], [3.], [-3.]])
+        expected_torques = np.matrix([[3.], [3.], [-3.], [3.], [-3.], [-3.], [3.], [-3.]])
+        computed_torques = c_walking_IK(q, qdot, dt, solo, t_simu)
 
         for i in range(8):
-            self.assertEqual(c_walking_IK(q, qdot, dt, solo, t_simu)[i, 0], torques[i, 0])
+            self.assertEqual(computed_torques[i, 0], expected_torques[i, 0])
 
 
 if __name__ == '__main__':
