@@ -19,7 +19,7 @@ sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
 deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub $(lsb_release -cs) robotpkg
 deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg
 EOF
-sudo apt update -qqy && sudo apt install -qqy robotpkg-py35-{pinocchio,example-robot-data,qt4-gepetto-viewer-corba}
+sudo apt update -qqy && sudo apt install -qqy robotpkg-py3\*-{pinocchio,example-robot-data,qt4-gepetto-viewer-corba}
 ```
 
 To install PyBullet:
