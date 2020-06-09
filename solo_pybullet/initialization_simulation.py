@@ -1,10 +1,10 @@
 # coding: utf8
 
 import numpy as np  # Numpy library
-
-import pybullet as p  # PyBullet simulator
 import pybullet_data
 from example_robot_data import loadSolo  # Functions to load the SOLO quadruped
+
+import pybullet as p  # PyBullet simulator
 
 
 def configure_simulation(dt, enableGUI):
