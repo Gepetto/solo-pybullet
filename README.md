@@ -23,7 +23,7 @@ sudo apt update -qqy && sudo apt install -qqy robotpkg-py3\*-{pinocchio,example-
 ```
 
 To install PyBullet:
-`pip install --user pybullet`
+`pip3 install --user pybullet`
 
 ## How to start the simulation
-launch `gepetto-gui`, then `python -m solo_pybullet`
+launch `gepetto-gui`, then `python3 -m solo_pybullet`
