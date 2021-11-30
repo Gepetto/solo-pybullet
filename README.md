@@ -15,6 +15,7 @@ To install [Pinocchio](https://github.com/stack-of-tasks/pinocchio/), the urdf a
 the [Gepetto Viewer](https://github.com/gepetto/gepetto-viewer-corba) and their python bindings:
 
 ```bash
+curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | sudo apt-key add -
 sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
 deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub $(lsb_release -cs) robotpkg
 deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg
