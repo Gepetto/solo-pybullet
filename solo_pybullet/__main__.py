@@ -8,9 +8,10 @@ import time
 
 import pybullet as p  # PyBullet simulator
 
-from .controller import c_walking_IK  # Controller functions
+from controller import c_walking_IK  # Controller functions
+
 # Functions to initialize the simulation and retrieve joints positions/velocities
-from .initialization_simulation import configure_simulation, getPosVelJoints
+from initialization_simulation import configure_simulation, getPosVelJoints
 
 ####################
 #  INITIALIZATION ##
@@ -27,11 +28,12 @@ robotId, solo, revoluteJointIndices = configure_simulation(dt, enableGUI)
 #  MAIN LOOP ##
 ###############
 
-for i in range(10000):  # run the simulation during dt * i_max seconds (simulation time)
-
+for i in range(
+    10000
+):  # run the simulation during dt * i_max seconds (simulation time)
     # Time at the start of the loop
     if realTimeSimulation:
-        t0 = time.clock()
+        t0 = time.time()
 
     # Get position and velocity of all joints in PyBullet (free flying base + motors)
     q, qdot = getPosVelJoints(robotId, revoluteJointIndices)
@@ -40,14 +42,19 @@ for i in range(10000):  # run the simulation during dt * i_max seconds (simulati
     jointTorques = c_walking_IK(q, qdot, dt, solo, i * dt)
 
     # Set control torques for all joints in PyBullet
-    p.setJointMotorControlArray(robotId, revoluteJointIndices, controlMode=p.TORQUE_CONTROL, forces=jointTorques)
+    p.setJointMotorControlArray(
+        robotId,
+        revoluteJointIndices,
+        controlMode=p.TORQUE_CONTROL,
+        forces=jointTorques,
+    )
 
     # Compute one step of simulation
     p.stepSimulation()
 
     # Sleep to get a real time simulation
     if realTimeSimulation:
-        t_sleep = dt - (time.clock() - t0)
+        t_sleep = dt - (time.time() - t0)
         if t_sleep > 0:
             time.sleep(t_sleep)
 

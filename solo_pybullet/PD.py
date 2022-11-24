@@ -4,8 +4,17 @@
 import numpy as np
 
 
-def PD(qa_ref, qa_dot_ref, qa, qa_dot, dt, Kp=1, Kd=1, torques_sat=5*np.ones((8, 1)), torques_ref=np.zeros((8, 1))):
-
+def PD(
+    qa_ref,
+    qa_dot_ref,
+    qa,
+    qa_dot,
+    dt,
+    Kp=1,
+    Kd=1,
+    torques_sat=5 * np.ones(8),
+    torques_ref=np.zeros(8),
+):
     # Output torques
     torques = Kp * (qa_ref - qa) + Kd * (qa_dot_ref - qa_dot) + torques_ref
 
